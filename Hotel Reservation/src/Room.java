@@ -2,29 +2,32 @@ import model.IRoom;
 import model.RoomType;
 
 public class Room implements IRoom {
-    private String RoomNumber;
-    private Double RoomPrice;
-    private RoomType RoomType;
+    private String roomNumber;
+    private Double price;
+    private RoomType enumeration;
 
-    public Room(String RoomNumber, Double RoomPrice, RoomType RoomType){
-        this.RoomNumber = RoomNumber;
-        this.RoomPrice = RoomPrice;
-        this.RoomType = RoomType;
+    public Room(String RoomNumber, Double price, RoomType enumeration){
+        this.roomNumber = RoomNumber;
+        this.price = price;
+        this.enumeration = enumeration;
+    }
+
+    public Room() {
     }
 
     @Override
     public String getRoomNumber() {
-        return RoomNumber;
+        return roomNumber;
     }
 
     @Override
     public Double getRoomPrice() {
-        return RoomPrice;
+        return price;
     }
 
     @Override
     public RoomType getRoomType() {
-        return RoomType;
+        return enumeration;
     }
 
     @Override
@@ -33,6 +36,6 @@ public class Room implements IRoom {
     }
 
     public String toString(){
-        return  "Your room number is: " + RoomNumber + " , Your room price is: " + RoomPrice + "Your room type is: " + RoomType;
+        return ("Your room number is: " + roomNumber + " , Your room price is: " + price + "Your room type is: " + enumeration);
     }
 }
